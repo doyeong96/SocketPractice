@@ -1,0 +1,11 @@
+services: 
+  db: 
+    image: mysql:5.7 
+    restart: always
+    container_name: mysql-security 
+    ports:
+      - "3307:3306"
+    environment: # -e 옵션
+      - MYSQL_DATABASE=test
+      - MYSQL_ROOT_PASSWORD=1234
+      - TZ=Asia/Seoul
